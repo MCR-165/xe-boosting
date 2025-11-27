@@ -1,11 +1,11 @@
-import TierGroup from './pricing/TierGroup';
+import PriceCard from './pricing/PriceCard';
 import BoostCalculator from './pricing/BoostCalculator';
-import { tierGroups } from './pricing/rankData';
+import { priceCardData } from './pricing/rankData';
 
 export default function Pricing() {
   return (
     <section id="pricing" className="bg-gray-900 p-8 md:p-20 text-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-4">Pricing</h2>
         <p className="text-center text-gray-400 mb-12">
           Choose your rank boost package below. Prices are per division climb.
@@ -19,9 +19,17 @@ export default function Pricing() {
         {/* Pricing Grid */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-8">Price List</h3>
-          {tierGroups.map((group) => (
-            <TierGroup key={group.tier} tier={group.tier} cards={group.cards} />
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {priceCardData.map((card) => (
+              <PriceCard
+                key={card.tier}
+                tier={card.tier}
+                tierColor={card.tierColor}
+                nextTier={card.nextTier}
+                boosts={card.boosts}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Add-ons Info */}

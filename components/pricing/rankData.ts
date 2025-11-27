@@ -46,19 +46,12 @@ export const tierColors = {
   Radiant: 'from-yellow-300 to-yellow-400'
 };
 
-export interface TierGroupData {
-  tier: string;
-  cards: Array<{
-    fromRank: string;
-    toRank: string;
-    price: number | null;
-  }>;
-}
-
-export const tierGroups: TierGroupData[] = [
+export const priceCardData = [
   {
     tier: 'Iron',
-    cards: [
+    nextTier: 'Bronze',
+    tierColor: 'from-gray-600 to-gray-700',
+    boosts: [
       { fromRank: 'Iron 1', toRank: 'Iron 2', price: 30 },
       { fromRank: 'Iron 2', toRank: 'Iron 3', price: 30 },
       { fromRank: 'Iron 3', toRank: 'Bronze 1', price: 30 }
@@ -66,7 +59,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Bronze',
-    cards: [
+    nextTier: 'Silver',
+    tierColor: 'from-amber-700 to-amber-800',
+    boosts: [
       { fromRank: 'Bronze 1', toRank: 'Bronze 2', price: 30 },
       { fromRank: 'Bronze 2', toRank: 'Bronze 3', price: 50 },
       { fromRank: 'Bronze 3', toRank: 'Silver 1', price: 50 }
@@ -74,7 +69,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Silver',
-    cards: [
+    nextTier: 'Gold',
+    tierColor: 'from-gray-400 to-gray-500',
+    boosts: [
       { fromRank: 'Silver 1', toRank: 'Silver 2', price: 65 },
       { fromRank: 'Silver 2', toRank: 'Silver 3', price: 70 },
       { fromRank: 'Silver 3', toRank: 'Gold 1', price: 70 }
@@ -82,7 +79,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Gold',
-    cards: [
+    nextTier: 'Platinum',
+    tierColor: 'from-yellow-500 to-yellow-600',
+    boosts: [
       { fromRank: 'Gold 1', toRank: 'Gold 2', price: 80 },
       { fromRank: 'Gold 2', toRank: 'Gold 3', price: 100 },
       { fromRank: 'Gold 3', toRank: 'Platinum 1', price: 110 }
@@ -90,7 +89,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Platinum',
-    cards: [
+    nextTier: 'Diamond',
+    tierColor: 'from-cyan-500 to-cyan-600',
+    boosts: [
       { fromRank: 'Platinum 1', toRank: 'Platinum 2', price: 120 },
       { fromRank: 'Platinum 2', toRank: 'Platinum 3', price: 150 },
       { fromRank: 'Platinum 3', toRank: 'Diamond 1', price: 170 }
@@ -98,7 +99,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Diamond',
-    cards: [
+    nextTier: 'Ascendant',
+    tierColor: 'from-purple-500 to-purple-600',
+    boosts: [
       { fromRank: 'Diamond 1', toRank: 'Diamond 2', price: 190 },
       { fromRank: 'Diamond 2', toRank: 'Diamond 3', price: 240 },
       { fromRank: 'Diamond 3', toRank: 'Ascendant 1', price: 280 }
@@ -106,7 +109,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Ascendant',
-    cards: [
+    nextTier: 'Immortal',
+    tierColor: 'from-green-500 to-green-600',
+    boosts: [
       { fromRank: 'Ascendant 1', toRank: 'Ascendant 2', price: 330 },
       { fromRank: 'Ascendant 2', toRank: 'Ascendant 3', price: 350 },
       { fromRank: 'Ascendant 3', toRank: 'Immortal 1', price: 450 }
@@ -114,7 +119,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Immortal',
-    cards: [
+    nextTier: 'Radiant',
+    tierColor: 'from-red-600 to-red-700',
+    boosts: [
       { fromRank: 'Immortal 1', toRank: 'Immortal 2', price: 600 },
       { fromRank: 'Immortal 2', toRank: 'Immortal 3', price: 750 },
       { fromRank: 'Immortal 3', toRank: 'Radiant', price: 1100 }
@@ -122,7 +129,9 @@ export const tierGroups: TierGroupData[] = [
   },
   {
     tier: 'Radiant',
-    cards: [
+    nextTier: 'Higher MMR',
+    tierColor: 'from-yellow-300 to-yellow-400',
+    boosts: [
       { fromRank: 'Radiant', toRank: 'Higher MMR', price: null }
     ]
   }

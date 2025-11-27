@@ -11,14 +11,8 @@ export default function Pricing() {
           Choose your rank boost package below. Prices are per division climb.
         </p>
 
-        {/* Calculator Section */}
-        <div className="mb-16">
-          <BoostCalculator />
-        </div>
-
         {/* Pricing Grid */}
         <div>
-          <h3 className="text-3xl font-bold text-center mb-8">Price List</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {priceCardData.map((card) => (
               <PriceCard
@@ -46,6 +40,12 @@ export default function Pricing() {
             </div>
           </div>
         </div>
+
+        {/* Calculator Section */}
+        <div className="mt-16 mb-16">
+          <BoostCalculator />
+        </div>
+
       </div>
     </section>
   );

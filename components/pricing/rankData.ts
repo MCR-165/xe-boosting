@@ -62,9 +62,9 @@ export const priceCardData = [
     nextTier: 'Silver',
     tierColor: 'from-amber-700 to-amber-800',
     boosts: [
-      { fromRank: 'Bronze 1', toRank: 'Bronze 2', price: 30 },
+      { fromRank: 'Bronze 1', toRank: 'Bronze 2', price: 50 },
       { fromRank: 'Bronze 2', toRank: 'Bronze 3', price: 50 },
-      { fromRank: 'Bronze 3', toRank: 'Silver 1', price: 50 }
+      { fromRank: 'Bronze 3', toRank: 'Silver 1', price: 65 }
     ]
   },
   {
@@ -72,9 +72,9 @@ export const priceCardData = [
     nextTier: 'Gold',
     tierColor: 'from-gray-400 to-gray-500',
     boosts: [
-      { fromRank: 'Silver 1', toRank: 'Silver 2', price: 65 },
+      { fromRank: 'Silver 1', toRank: 'Silver 2', price: 70 },
       { fromRank: 'Silver 2', toRank: 'Silver 3', price: 70 },
-      { fromRank: 'Silver 3', toRank: 'Gold 1', price: 70 }
+      { fromRank: 'Silver 3', toRank: 'Gold 1', price: 80 }
     ]
   },
   {
@@ -82,9 +82,9 @@ export const priceCardData = [
     nextTier: 'Platinum',
     tierColor: 'from-yellow-500 to-yellow-600',
     boosts: [
-      { fromRank: 'Gold 1', toRank: 'Gold 2', price: 80 },
-      { fromRank: 'Gold 2', toRank: 'Gold 3', price: 100 },
-      { fromRank: 'Gold 3', toRank: 'Platinum 1', price: 110 }
+      { fromRank: 'Gold 1', toRank: 'Gold 2', price: 100 },
+      { fromRank: 'Gold 2', toRank: 'Gold 3', price: 110 },
+      { fromRank: 'Gold 3', toRank: 'Platinum 1', price: 120 }
     ]
   },
   {
@@ -92,9 +92,9 @@ export const priceCardData = [
     nextTier: 'Diamond',
     tierColor: 'from-cyan-500 to-cyan-600',
     boosts: [
-      { fromRank: 'Platinum 1', toRank: 'Platinum 2', price: 120 },
-      { fromRank: 'Platinum 2', toRank: 'Platinum 3', price: 150 },
-      { fromRank: 'Platinum 3', toRank: 'Diamond 1', price: 170 }
+      { fromRank: 'Platinum 1', toRank: 'Platinum 2', price: 150 },
+      { fromRank: 'Platinum 2', toRank: 'Platinum 3', price: 170 },
+      { fromRank: 'Platinum 3', toRank: 'Diamond 1', price: 190 }
     ]
   },
   {
@@ -102,9 +102,9 @@ export const priceCardData = [
     nextTier: 'Ascendant',
     tierColor: 'from-purple-500 to-purple-600',
     boosts: [
-      { fromRank: 'Diamond 1', toRank: 'Diamond 2', price: 190 },
-      { fromRank: 'Diamond 2', toRank: 'Diamond 3', price: 240 },
-      { fromRank: 'Diamond 3', toRank: 'Ascendant 1', price: 280 }
+      { fromRank: 'Diamond 1', toRank: 'Diamond 2', price: 240 },
+      { fromRank: 'Diamond 2', toRank: 'Diamond 3', price: 280 },
+      { fromRank: 'Diamond 3', toRank: 'Ascendant 1', price: 330 }
     ]
   },
   {
@@ -112,27 +112,26 @@ export const priceCardData = [
     nextTier: 'Immortal',
     tierColor: 'from-green-500 to-green-600',
     boosts: [
-      { fromRank: 'Ascendant 1', toRank: 'Ascendant 2', price: 330 },
-      { fromRank: 'Ascendant 2', toRank: 'Ascendant 3', price: 350 },
-      { fromRank: 'Ascendant 3', toRank: 'Immortal 1', price: 450 }
+      { fromRank: 'Ascendant 1', toRank: 'Ascendant 2', price: 350 },
+      { fromRank: 'Ascendant 2', toRank: 'Ascendant 3', price: 450 },
+      { fromRank: 'Ascendant 3', toRank: 'Immortal 1', price: 600 }
     ]
   },
   {
-    tier: 'Immortal',
-    nextTier: 'Radiant',
+    tier: 'Immortal 1',
+    nextTier: 'Immortal 3',
     tierColor: 'from-red-600 to-red-700',
     boosts: [
-      { fromRank: 'Immortal 1', toRank: 'Immortal 2', price: 600 },
-      { fromRank: 'Immortal 2', toRank: 'Immortal 3', price: 750 },
-      { fromRank: 'Immortal 3', toRank: 'Radiant', price: 1100 }
+      { fromRank: 'Immortal 1', toRank: 'Immortal 2', price: 750 },
+      { fromRank: 'Immortal 2', toRank: 'Immortal 3', price: 1100 }
     ]
   },
   {
-    tier: 'Radiant',
-    nextTier: 'Higher MMR',
+    tier: 'Immortal 3',
+    nextTier: 'Radiant',
     tierColor: 'from-yellow-300 to-yellow-400',
     boosts: [
-      { fromRank: 'Radiant', toRank: 'Higher MMR', price: null }
+      { fromRank: 'Immortal 3', toRank: 'Radiant', price: null }
     ]
   }
 ];

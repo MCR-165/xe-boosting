@@ -4,9 +4,28 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  /* This sets the default font for the whole site to Rajdhani */
+  font-family: var(--font-rajdhani), ui-sans-serif, system-ui;
+  background-color: #000; /* Assuming a dark theme based on your color choices */
+  color: #fff;
+}
+
+@layer base {
+  /* 1. Set the default font for the whole site */
+  body {
+    font-family: var(--font-rajdhani), sans-serif;
+  }
+
+  /* 2. Set the default font for all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat), sans-serif;
+  }
+}
+
 /* GLOBAL FONT + SECTION STYLING */
 section {
-  padding-top: 5rem;   /* spacing from top */
+  padding-top: 8rem;   /* spacing from top */
   padding-bottom: 5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -14,23 +33,19 @@ section {
 }
 
 /* GLOBAL HEADING STYLING */
-section h2 {
-  font-size: 2rem;     /* text-3xl */
-  font-weight: 700;    /* font-bold */
-  margin-bottom: 1.5rem;
-  color: #fff;
+:where(section h2) {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: #ffffff; 
 }
 
 /* GLOBAL PARAGRAPH STYLING */
 section p {
-  font-size: 1.1rem;
-  line-height: 1.75rem;
+  font-family: var(--font-rajdhani), ui-sans-serif, system-ui;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   opacity: 0.85;
   color: #e5e5e5;
-}
-
-/* GLOBAL FONT FAMILY */
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }

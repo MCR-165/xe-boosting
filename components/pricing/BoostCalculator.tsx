@@ -44,7 +44,7 @@ export default function BoostCalculator() {
         {/* Input Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label className="block font-rajdhani text-sm font-semibold text-blue-300 mb-2 uppercase tracking-wider">Current Rank</label>
+            <label className="block font-rajdhani text-lg font-semibold text-blue-300 mb-2 uppercase tracking-wider">Current Rank</label>
             <select
               value={currentRank}
               onChange={(e) => setCurrentRank(e.target.value)}
@@ -57,7 +57,7 @@ export default function BoostCalculator() {
           </div>
 
           <div>
-            <label className="block font-rajdhani text-sm font-semibold text-blue-300 mb-2 uppercase tracking-wider">Desired Rank</label>
+            <label className="block font-rajdhani text-lg font-semibold text-blue-300 mb-2 uppercase tracking-wider">Desired Rank</label>
             <select
               value={desiredRank}
               onChange={(e) => setDesiredRank(e.target.value)}

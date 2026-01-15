@@ -36,10 +36,10 @@ export default function Pricing() {
 <div className="mt-16 max-w-4xl mx-auto">
   {/* Header & New Description */}
   <div className="mb-8 text-center md:text-left">
-    <h4 className="font-montserrat text-2xl font-bold text-blue-100 tracking-tight flex items-center justify-center md:justify-start gap-2">
+    <h4 className="font-montserrat text-3xl font-bold text-blue-100 tracking-tight flex items-center justify-center md:justify-start gap-2">
       <span className="text-blue-400"></span>Add-on Services
     </h4>
-    <p className="font-rajdhani text-blue-200/60 text-sm mt-1">
+    <p className="font-rajdhani text-blue-200/60 text-xs mt-1">
       Enhance your boosting experience with our premium add-ons
     </p>
   </div>
@@ -49,7 +49,7 @@ export default function Pricing() {
         <div className="group p-5 rounded-2xl bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">
           <div className="flex justify-between items-start mb-1">
             <span className="font-montserrat text-4xl font-bold text-white tracking-tight">Party Boost</span>
-            <span className="font-montserrat text-blue-400 font-black text-medium tracking-widest">+200% PRICE</span>
+            <span className="font-montserrat text-blue-400 font-black text-2xl tracking-widest">+200% PRICE</span>
           </div>
           <p className="font-rajdhani text-blue-100/60 text-sm leading-tight">
             Play alongside our pro boosters. No account sharing required—stay in control.
@@ -60,7 +60,7 @@ export default function Pricing() {
         <div className="group p-5 rounded-2xl bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">
           <div className="flex justify-between items-start mb-1">
             <span className="font-montserrat text-4xl font-bold text-white tracking-tight">Rush Boost</span>
-            <span className="font-montserrat text-blue-400 font-black text-medium tracking-widest">+120% PRICE</span>
+            <span className="font-montserrat text-blue-400 font-black text-2xl tracking-widest">+120% PRICE</span>
           </div>
           <p className="font-rajdhani text-blue-100/60 leading-tight">
             Skip the queue. Your order becomes our top priority for the fastest possible completion.

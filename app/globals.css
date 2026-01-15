@@ -44,7 +44,7 @@ section {
 /* GLOBAL PARAGRAPH STYLING */
 section p {
   font-family: var(--font-rajdhani), ui-sans-serif, system-ui;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   opacity: 0.85;
   color: #e5e5e5;

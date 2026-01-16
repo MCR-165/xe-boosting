@@ -43,9 +43,9 @@ export default function Navbar() {
           <a href="#pricing" className="text-white/70 hover:text-[#1282FF] transition-all duration-300">
             Pricing
           </a>
-          <a href="#testimonials" className="text-white/70 hover:text-[#1282FF] transition-all duration-300">
+          {/* <a href="#testimonials" className="text-white/70 hover:text-[#1282FF] transition-all duration-300">
             Reviews
-          </a>
+          </a> */}
           <a href="#faq" className="text-white/70 hover:text-[#1282FF] transition-all duration-300">
             FAQ
           </a>

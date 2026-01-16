@@ -80,9 +80,9 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="p-6 pt-0 font-rajdhani text-blue-100/70 text-lg leading-relaxed border-t border-white/5 mt-2">
-                  {item.answer}
-                </div>
+              <div className="px-6 pb-6 pt-4 font-rajdhani text-blue-100/70 text-lg leading-relaxed border-t border-white/5 tracking-wide">
+                {item.answer}
+              </div>
               </div>
             </div>
           ))}

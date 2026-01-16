@@ -6,10 +6,10 @@ export default function Services() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="font-montserrat text-4xl md:text-5xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-[#1282FF]">
-            Premium Services
-          </h2>
+        <div className="text-center mb-8">
+        <h2 className="font-montserrat text-3xl md:text-5xl font-bold tracking-tighter uppercase text-white">
+          Premium <span className="text-[#1282FF] drop-shadow-[0_0_15px_rgba(18,130,255,0.5)]">Services</span>
+        </h2>
           <div className="h-1.5 w-20 bg-[#1282FF] mx-auto mt-4 rounded-full shadow-[0_0_15px_#1282FF]" />
         </div>
         
@@ -23,7 +23,7 @@ export default function Services() {
               </svg>
             </div>
             <h3 className="font-montserrat text-2xl font-bold mb-4 text-white tracking-tight">Rank Boosting</h3>
-            <p className="font-rajdhani text-lg text-blue-100/60 leading-relaxed">
+            <p className="font-rajdhani text-lg text-blue-100/60 leading-relaxed tracking-tight">
               Precision climbing for any rank. Secure your desired division with our high-winrate professional roster.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function Services() {
               </svg>
             </div>
             <h3 className="font-montserrat text-2xl font-bold mb-4 text-white tracking-tight">Duo Queuing</h3>
-            <p className="font-rajdhani text-lg text-blue-100/60 leading-relaxed">
+            <p className="font-rajdhani text-sm text-blue-100/60 leading-relaxed tracking-tight">
               Play alongside a pro. Learn high-level mechanics and game sense while maintaining full account control.
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function Services() {
               </svg>
             </div>
             <h3 className="font-montserrat text-2xl font-bold mb-4 text-white tracking-tight">Placements</h3>
-            <p className="font-rajdhani text-lg text-blue-100/60 leading-relaxed">
+            <p className="font-rajdhani text-lg text-blue-100/60 leading-relaxed tracking-tight">
               Secure the best possible start. Our top-tier performers ensure high MMR placement for the new season.
             </p>
           </div>

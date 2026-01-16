@@ -23,7 +23,7 @@ export default function Contact() {
             <ul className="font-rajdhani space-y-3 text-blue-100/60 text-lg">
               <li><a href="#services" className="hover:text-[#1282FF] transition-colors">Services</a></li>
               <li><a href="#pricing" className="hover:text-[#1282FF] transition-colors">Pricing</a></li>
-              <li><a href="#testimonials" className="hover:text-[#1282FF] transition-colors">Testimonials</a></li>
+              {/* <li><a href="#testimonials" className="hover:text-[#1282FF] transition-colors">Testimonials</a></li> */}
               <li><a href="#faq" className="hover:text-[#1282FF] transition-colors">FAQ</a></li>
             </ul>
           </div>

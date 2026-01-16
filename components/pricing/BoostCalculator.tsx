@@ -36,84 +36,103 @@ export default function BoostCalculator() {
   const result = calculatePrice();
 
   return (
-    <div className="relative group p-8 bg-blue-900/10 border border-blue-500/20 rounded-3xl backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)] max-w-2xl mx-auto">
-      {/* Decorative inner glow */}
-      <div className="absolute inset-0 bg-blue-500/5 rounded-3xl pointer-events-none group-hover:bg-blue-500/10 transition-colors duration-500" />
+    <div className="relative group p-10 bg-[#1282FF]/5 border border-[#1282FF]/20 rounded-[2rem] backdrop-blur-xl shadow-[0_0_50px_rgba(18,130,255,0.1)] max-w-2xl mx-auto overflow-hidden">
+      {/* Dynamic Background Ornament */}
+      <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#1282FF]/10 blur-[80px] rounded-full pointer-events-none" />
       
-      <div className="relative z-10 space-y-6">
+      <div className="relative z-10 space-y-8">
+        {/* Title Tag */}
+        <div className="flex justify-center">
+          <span className="px-4 py-1 rounded-full bg-[#1282FF]/10 border border-[#1282FF]/30 text-[#1282FF] font-rajdhani text-xs font-bold tracking-[0.3em] uppercase">
+            Instant Quote Generator
+          </span>
+        </div>
+
         {/* Input Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label className="block font-rajdhani text-lg font-semibold text-blue-300 mb-2 uppercase tracking-wider">Current Rank</label>
-            <select
-              value={currentRank}
-              onChange={(e) => setCurrentRank(e.target.value)}
-              className="w-full bg-blue-950/40 border border-blue-500/20 rounded-xl px-4 py-3 text-white font-rajdhani focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all appearance-none cursor-pointer"
-            >
-              {ranks.map(rank => (
-                <option key={rank.id} value={rank.id} className="bg-navy-950 text-white">{rank.name}</option>
-              ))}
-            </select>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-3">
+            <label className="block font-montserrat text-xs font-black text-[#1282FF] uppercase tracking-widest ml-1">Current Rank</label>
+            <div className="relative">
+              <select
+                value={currentRank}
+                onChange={(e) => setCurrentRank(e.target.value)}
+                className="w-full bg-blue-950/20 border border-white/10 rounded-2xl px-5 py-4 text-white font-rajdhani text-lg focus:outline-none focus:border-[#1282FF] focus:ring-1 focus:ring-[#1282FF] transition-all appearance-none cursor-pointer"
+              >
+                {ranks.map(rank => (
+                  <option key={rank.id} value={rank.id} className="bg-[#020617] text-white">{rank.name}</option>
+                ))}
+              </select>
+              <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#1282FF]">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <label className="block font-rajdhani text-lg font-semibold text-blue-300 mb-2 uppercase tracking-wider">Desired Rank</label>
-            <select
-              value={desiredRank}
-              onChange={(e) => setDesiredRank(e.target.value)}
-              className="w-full bg-blue-950/40 border border-blue-500/20 rounded-xl px-4 py-3 text-white font-rajdhani focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all appearance-none cursor-pointer"
-            >
-              {ranks.map(rank => (
-                <option key={rank.id} value={rank.id} className="bg-navy-950 text-white">{rank.name}</option>
-              ))}
-            </select>
+          <div className="space-y-3">
+            <label className="block font-montserrat text-xs font-black text-[#1282FF] uppercase tracking-widest ml-1">Desired Rank</label>
+            <div className="relative">
+              <select
+                value={desiredRank}
+                onChange={(e) => setDesiredRank(e.target.value)}
+                className="w-full bg-blue-950/20 border border-white/10 rounded-2xl px-5 py-4 text-white font-rajdhani text-lg focus:outline-none focus:border-[#1282FF] focus:ring-1 focus:ring-[#1282FF] transition-all appearance-none cursor-pointer"
+              >
+                {ranks.map(rank => (
+                  <option key={rank.id} value={rank.id} className="bg-[#020617] text-white">{rank.name}</option>
+                ))}
+              </select>
+              <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#1282FF]">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Checkboxes - Glass Style */}
-        <div className="flex flex-col md:flex-row gap-4 pt-2">
-          <label className="flex-1 flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-2xl cursor-pointer hover:bg-white/10 transition-all group/item">
-            <div className="flex items-center space-x-3">
+        {/* Multipliers - Updated Visuals */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label className={`flex items-center justify-between p-5 border rounded-2xl cursor-pointer transition-all duration-300 ${partyBoost ? 'bg-[#1282FF]/10 border-[#1282FF]' : 'bg-white/5 border-white/5 hover:bg-white/10'}`}>
+            <div className="flex items-center space-x-4">
               <input
                 type="checkbox"
                 checked={partyBoost}
                 onChange={(e) => setPartyBoost(e.target.checked)}
-                className="w-5 h-5 accent-blue-500 rounded border-none"
+                className="w-5 h-5 accent-[#1282FF] rounded border-none"
               />
-              <span className="font-rajdhani text-blue-100">Party Boost</span>
+              <span className="font-rajdhani text-lg font-bold text-white">Party Boost</span>
             </div>
-            <span className="font-montserrat text-[20px] font-black text-blue-400">+200%</span>
+            <span className={`font-montserrat text-lg font-black ${partyBoost ? 'text-[#1282FF]' : 'text-white/20'}`}>x2.0</span>
           </label>
 
-          <label className="flex-1 flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-2xl cursor-pointer hover:bg-white/10 transition-all group/item">
-            <div className="flex items-center space-x-3">
+          <label className={`flex items-center justify-between p-5 border rounded-2xl cursor-pointer transition-all duration-300 ${rushBoost ? 'bg-[#1282FF]/10 border-[#1282FF]' : 'bg-white/5 border-white/5 hover:bg-white/10'}`}>
+            <div className="flex items-center space-x-4">
               <input
                 type="checkbox"
                 checked={rushBoost}
                 onChange={(e) => setRushBoost(e.target.checked)}
-                className="w-5 h-5 accent-blue-500 rounded border-none"
+                className="w-5 h-5 accent-[#1282FF] rounded border-none"
               />
-              <span className="font-rajdhani text-blue-100">Rush Boost</span>
+              <span className="font-rajdhani text-lg font-bold text-white">Rush Boost</span>
             </div>
-            <span className="font-montserrat text-[20px] font-black text-blue-400">+120%</span>
+            <span className={`font-montserrat text-lg font-black ${rushBoost ? 'text-[#1282FF]' : 'text-white/20'}`}>x1.2</span>
           </label>
         </div>
 
         {/* Result Area */}
-        <div className="pt-8 border-t border-white/5">
+        <div className="pt-8 mt-4 border-t border-white/5">
           {result.error ? (
-            <div className="text-center font-rajdhani text-blue-400/80 text-lg animate-pulse">{result.error}</div>
+            <div className="text-center font-rajdhani text-[#1282FF] text-lg font-bold italic animate-pulse">{result.error}</div>
           ) : result.total === null ? (
-            <div className="text-center">
-              <div className="font-rajdhani text-blue-200/40 text-xs uppercase tracking-[0.2em] mb-1">Estimate</div>
-              <div className="font-montserrat text-4xl font-black text-blue-400 drop-shadow-[0_0_15px_rgba(96,165,250,0.4)]">NEGOTIABLE</div>
-              <div className="font-rajdhani text-blue-200/60 text-sm mt-2">Contact us for high-tier ranking</div>
+            <div className="text-center group-hover:scale-105 transition-transform duration-500">
+              <div className="font-rajdhani text-blue-200/40 text-xs uppercase tracking-[0.4em] mb-2 font-black">Estimate Status</div>
+              <div className="font-montserrat text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-[#1282FF]">NEGOTIABLE</div>
+              <p className="font-rajdhani text-blue-200/60 text-sm mt-3 uppercase tracking-widest">Connect with us for Immortal+ Ranking</p>
             </div>
           ) : (
-            <div className="text-center">
-              <div className="font-rajdhani text-blue-200/40 text-xs uppercase tracking-[0.2em] mb-1">Total Price</div>
-              <div className="font-montserrat text-5xl font-black text-white drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                ₱{result.total.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+            <div className="text-center group-hover:scale-105 transition-transform duration-500">
+              <div className="font-rajdhani text-blue-200/40 text-xs uppercase tracking-[0.4em] mb-2 font-black">Estimated Total</div>
+              <div className="font-montserrat text-7xl font-black text-white inline-block relative">
+                <span className="text-[#1282FF] text-3xl absolute -left-10 top-2">₱</span>
+                {result.total.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                <div className="absolute -bottom-2 left-0 w-full h-1 bg-[#1282FF] rounded-full blur-sm opacity-50" />
               </div>
             </div>
           )}

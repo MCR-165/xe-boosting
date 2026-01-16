@@ -23,7 +23,7 @@ export default function Pricing() {
           <h2 className="font-montserrat text-5xl md:text-6xl font-bold text-center mb-4 tracking-tighter uppercase">
             Pricing <span className="text-[#1282FF] drop-shadow-[0_0_15px_rgba(18,130,255,0.5)]">Packages</span>
           </h2>
-          <p className="font-rajdhani text-center text-blue-200/60 text-lg md:text-xl max-w-2xl mx-auto tracking-tight">
+          <p className="font-rajdhani text-center text-blue-200/60 text-lg md:text-xl max-w-2xl mx-auto tracking-wide">
             Professional grade performance per division climb.
           </p>
         </div>
@@ -54,17 +54,31 @@ export default function Pricing() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Party Boost */}
-            <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/10 hover:border-[#1282FF]/40 transition-all duration-500">
-              <div className="flex justify-between items-start mb-3">
-                <span className="font-montserrat text-3xl font-bold text-white uppercase italic tracking-tighter">Party Boost</span>
-                <span className="font-rajdhani text-[#1282FF] font-bold text-xl">+200%</span>
-              </div>
-              <p className="font-rajdhani text-blue-100/60 text-sm leading-snug">
-                Play alongside our pro boosters. No account sharing required—stay in total control of your journey.
-              </p>
+        {/* Party Boost */}
+        <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/10 hover:border-[#1282FF]/40 transition-all duration-500">
+          
+          {/* Popular Tag - Positioned at the top-right */}
+          <div className="absolute -top-3 -right-2 z-20">
+            <div className="relative">
+              {/* Outer Glow Effect */}
+              <div className="absolute inset-0 bg-[#1282FF] blur-md opacity-40 animate-pulse" />
+              {/* The Badge */}
+              <span className="relative block px-3 py-1 bg-[#1282FF] text-white text-[10px] font-black font-montserrat uppercase tracking-[0.15em] rounded-full shadow-[0_0_15px_rgba(18,130,255,0.6)]">
+                Popular
+              </span>
             </div>
+          </div>
 
+          <div className="flex justify-between items-start mb-3">
+            <span className="font-montserrat text-3xl font-bold text-white uppercase italic tracking-tighter">Party Boost</span>
+            {/* Moved the percentage slightly to make room for the tag if needed, or kept as is */}
+            <span className="font-rajdhani text-[#1282FF] font-bold text-xl">+200%</span>
+          </div>
+          
+          <p className="font-rajdhani text-blue-100/60 text-sm leading-snug">
+            Play alongside our pro boosters. No account sharing required—stay in total control of your journey.
+          </p>
+        </div>
             {/* Rush Boost */}
             <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/10 hover:border-[#1282FF]/40 transition-all duration-500">
               <div className="flex justify-between items-start mb-3">

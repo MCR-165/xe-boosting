@@ -55,7 +55,7 @@ export default function Navbar() {
             href="#contact"
             className="relative group px-6 py-2 overflow-hidden rounded-lg bg-[#1282FF]/10 border border-[#1282FF]/50 text-white transition-all duration-300 hover:bg-[#1282FF] hover:shadow-[0_0_20px_rgba(18,130,255,0.5)]"
           >
-            <span className="relative z-10 font-montserrat font-black italic tracking-tighter">CONTACT</span>
+            <span className="relative z-10 font-montserrat font-black tracking-tighter">CONTACT</span>
           </a>
         </div>
       </div>

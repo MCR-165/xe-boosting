@@ -82,7 +82,7 @@ export default function Pricing() {
             {/* Rush Boost */}
             <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/10 hover:border-[#1282FF]/40 transition-all duration-500">
               <div className="flex justify-between items-start mb-3">
-                <span className="font-montserrat text-3xl font-bold text-white uppercase italic tracking-tighter">Rush Order</span>
+                <span className="font-montserrat text-3xl font-bold text-white uppercase italic tracking-tighter">Rush Boost</span>
                 <span className="font-rajdhani text-[#1282FF] font-bold text-xl">+120%</span>
               </div>
               <p className="font-rajdhani text-blue-100/60 text-lg leading-snug">
@@ -96,7 +96,7 @@ export default function Pricing() {
         <div className="mt-20 relative">
           <div className="text-center mb-12">
             <h3 className="font-montserrat text-5xl font-bold tracking-tighter text-white uppercase">
-              Rank <span className="text-[#1282FF]">Calculator</span>
+              Boost <span className="text-[#1282FF]">Calculator</span>
             </h3>
             <p className="font-rajdhani text-blue-200/60 text-xl mt-4 max-w-2xl mx-auto leading-relaxed tracking-wide">
               Estimate your total cost instantly.

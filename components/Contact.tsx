@@ -35,7 +35,7 @@ export default function Contact() {
               Join our community server for 24/7 support.
             </p>
             <a
-              href="https://discord.gg/HMEQETyQ2v"
+              href="https://discord.com/invite/7rwMkcgH8V"
               target="_blank"
               className="flex items-center justify-center gap-3 bg-[#1282FF] hover:bg-[#1282FF]/90 text-white font-montserrat font-black py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(18,130,255,0.4)] hover:scale-[1.02]"
             >

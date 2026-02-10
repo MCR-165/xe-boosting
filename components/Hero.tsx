@@ -86,7 +86,7 @@ export default function Hero() {
           className={`flex flex-col sm:flex-row gap-4 mb-9 transition-all duration-1000 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           <a
-            href="https://discord.gg/HMEQETyQ2v"
+            href="https://discord.com/invite/7rwMkcgH8V"
             target="_blank"
             className="group relative inline-flex items-center justify-center px-9 py-3 font-montserrat font-bold text-white transition-all duration-300 bg-[#1282FF] rounded-2xl shadow-[0_0_25px_rgba(18,130,255,0.4)] hover:shadow-[0_0_50px_rgba(18,130,255,0.6)] hover:-translate-y-1 uppercase tracking-tight"
           >

@@ -4,7 +4,7 @@ import { useState } from "react";
 const faqData = [
   {
     question: "Is Valorant boosting safe?",
-    answer: "Absolutely. We prioritize account security above all else. Our boosters use high-quality VPNs to match your local IP address and follow strict protocols to ensure your account remains undetected and secure."
+    answer: "We prioritize account safety by keeping gameplay consistent. Boosts are played during your usual hours and only on agents within your existing agent pool. While no third-party service can guarantee zero risk, we follow strict internal guidelines to minimize it."
   },
   {
     question: "How long does it take to complete my boost?",

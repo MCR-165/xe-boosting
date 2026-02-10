@@ -32,10 +32,10 @@ export default function Contact() {
           <div className="bg-[#1282FF]/5 border border-[#1282FF]/20 p-8 rounded-2xl backdrop-blur-sm">
             <h4 className="font-montserrat font-bold text-lg mb-2 uppercase tracking-widest">Get Started</h4>
             <p className="font-rajdhani text-blue-200/60 mb-6 text-sm">
-              Join 500+ gamers on our community server for 24/7 support.
+              Join our community server for 24/7 support.
             </p>
             <a
-              href="https://discord.gg/yourlink"
+              href="https://discord.gg/HMEQETyQ2v"
               target="_blank"
               className="flex items-center justify-center gap-3 bg-[#1282FF] hover:bg-[#1282FF]/90 text-white font-montserrat font-black py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(18,130,255,0.4)] hover:scale-[1.02]"
             >
